@@ -1,6 +1,9 @@
 # 畢業門檻查詢&amp;輔助程式 (開發中)
 
-UI使用PyQt6開發，Nuitka打包 
+#### 使用語言：Python
+#### UI：PyQt6
+#### 打包工具：Nuitka
+
 
 # 首頁
 
@@ -57,8 +60,9 @@ https://github.com/DMCDN/LHWork/assets/128150279/4eafa9ee-56ed-404c-afc1-b14b6d6
 
 <img src="https://github.com/DMCDN/LHWork/assets/128150279/931c8a4f-7974-4906-ac45-a5b1056a3603" width="500" height="300">
 
-# 其餘作品
-軟體更新程式 (https://github.com/DMCDN/QTUpdate)
 
-軟體介紹/下載/啟用網站 (https://lwork.pythonanywhere.com/)
+# 附加作品
 
+###### 軟體更新/啟用驗證程式 (https://github.com/DMCDN/QTUpdate)
+
+###### 軟體介紹/下載/啟用網站 (https://lwork.pythonanywhere.com/)
