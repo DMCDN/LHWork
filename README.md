@@ -81,7 +81,7 @@ https://github.com/DMCDN/LHWork/assets/128150279/4eafa9ee-56ed-404c-afc1-b14b6d6
 
 ## patch.res
 #### 考量到時間成本(解壓+下載時間總長)
-* 預設情況使用Zstd壓縮，~~並加密前16bytes~~ 小於1kb的文件則加密整個文件
+* 預設情況使用Zstd壓縮，小於1kb的文件則加密整個文件
 
 * 以下情況使用lzma壓縮：
 文件大於100mb
@@ -111,8 +111,8 @@ https://github.com/DMCDN/LHWork/assets/128150279/4eafa9ee-56ed-404c-afc1-b14b6d6
 * 下載前，比對VersionConfig與軟體紀載的版本是否相同
 * 若不匹配，開始分析本地的所有文件與記錄文件(patch.resdiff)的crc32值
 * 接著下載&解壓差異文件
-    
 
+## 實機畫面
 https://github.com/DMCDN/QTUpdate/assets/128150279/fc788936-c14f-48de-9668-670f0414a4e5
 
 ## 檢查軟體啟用狀態
@@ -121,12 +121,33 @@ https://github.com/DMCDN/QTUpdate/assets/128150279/fc788936-c14f-48de-9668-670f0
 
 首次使用有1小時試用時間，到期則會要求將程式顯示的序號，輸入至網站的啟用頁面
 
-透過進入 https://lwork.pythonanywhere.com 購買啟用權限輸入(購買流程開發中)
+透過進入 https://lwork.pythonanywhere.com 購買啟用權限輸入
 
 https://github.com/DMCDN/QTUpdate/assets/128150279/cb95f7f4-4fb5-471c-a339-59f108c79881
 
 
 
+#### 軟體介紹/下載/啟用網站(開發中) [https://lwork.pythonanywhere.com/]
+
+目前已實際完成的功能：
+
+- 註冊與登入
+  
+  ![image](https://github.com/DMCDN/LHWork/assets/128150279/dbeaea47-aa0e-4dbc-aab4-719d8edccbac)
+
+- 信箱驗證功能
+  
+    ![image](https://github.com/DMCDN/LHWork/assets/128150279/edcfe31e-2c58-4984-b8ee-e9558eebd85e)
+
+- 產品啟用功能
+  
+      設計一個API，給軟體的啟用狀態檢測系統使用
+  
+    ![image](https://github.com/DMCDN/LHWork/assets/128150279/fa29b6ba-05f6-4292-a604-cbbc52e52cb4)
+  
+
+- 各科通過率
+  
+  ![image](https://github.com/DMCDN/LHWork/assets/128150279/3bd440d0-ec49-4178-8b1f-e97e5084437f)
 
 
-#### 軟體介紹/下載/啟用網站(尚未完成) [https://lwork.pythonanywhere.com/]
