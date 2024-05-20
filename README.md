@@ -14,7 +14,7 @@
   - zstandard、lzma：文件壓縮/解壓
   - traceback、logging：紀錄程式錯誤訊息
   - concurrent.futures：多線程操作
-
+  - Flask：製作網頁後端功能
 ## 首頁
 
 <img src="https://github.com/DMCDN/LHWork/assets/128150279/2996341d-3e70-4079-94a0-df42a4421426" width="300" height="300">
