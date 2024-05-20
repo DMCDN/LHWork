@@ -1,9 +1,19 @@
 # 畢業門檻查詢&amp;輔助程式
 
-#### 使用語言：Python
-#### UI：PyQt6
-#### 打包工具：Nuitka
+* 工具
+  - 使用語言：Python
+  - UI：PyQt6
+  - 打包工具：Nuitka
 
+* 使用的第三方套件&用途
+  - requests：爬取學生資料、對網頁API發送GET/POST請求
+  - BeautifulSoup：網頁資料處理
+  - pickle：儲存/使用Cookies
+  - Crypto.Cipher：文件加密/解密
+  - hashlib：紀錄/檢測文件或資料的Hash值
+  - zstandard、lzma：文件壓縮/解壓
+  - traceback、logging：紀錄程式錯誤訊息
+  - concurrent.futures：多線程操作
 
 ## 首頁
 
