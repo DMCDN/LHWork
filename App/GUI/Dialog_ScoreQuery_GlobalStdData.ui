@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScoreQuery_GlobalStdData</class>
+ <widget class="QDialog" name="ScoreQuery_GlobalStdData">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>985</width>
+    <height>652</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>test40316</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#ScoreQuery{
+background-color: rgb(255, 252, 235);
+}
+
+    QPushButton{
+		border:0;
+		font: 700 11pt ;
+		border:1px solid #000;
+		background:#fff;
+		border-radius:10px;
+    }
+    QPushButton:hover{
+        border:2px solid #000;
+	
+	background-color: rgb(255, 253, 188);
+    }</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>951</width>
+     <height>581</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 700 12pt &quot;微軟正黑體&quot;;
+background-color: rgb(231, 255, 241);</string>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <property name="sortingEnabled">
+    <bool>true</bool>
+   </property>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QTextEdit" name="filterText">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>10</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>篩選科目名稱</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+		border:0;
+		font: 700 11pt ;
+		border:1px solid #000;
+		background-color: rgb(221, 221, 221);
+		border-radius:10px;
+		td align=&quot;center&quot; valign=&quot;center&quot;;
+		font: 8pt &quot;微軟正黑體&quot;;</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="placeholderText">
+    <string>篩選科目名稱</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

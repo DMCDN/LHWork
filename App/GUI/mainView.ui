@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainViewWindow</class>
+ <widget class="QMainWindow" name="MainViewWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>503</width>
+    <height>519</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>GUI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget{
+background-color: rgb(255, 252, 235);}
+
+
+    QPushButton{
+		border:0;
+		font: 700 12pt ;
+		border:1px solid #000;
+		background:#fff;
+		border-radius:10px;
+    }
+    QPushButton:hover{
+        border:4px solid #000;
+	background-color: rgb(255, 255, 0);
+    }</string>
+   </property>
+   <widget class="QLabel" name="label_UserID">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>60</y>
+      <width>411</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">		color:black;
+		text-decoration: underline;
+		
+background-color: rgb(255, 130, 126);
+		border:0;
+		border:1px solid #000;
+		border-radius:10px;
+</string>
+    </property>
+    <property name="text">
+     <string>當前用戶：您尚未登入</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLogin">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>460</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    QPushButton{
+		border:0;
+		font: 700 10pt ;
+		border:1px solid #000;
+		background-color:#fff;
+		border-radius:10px;
+    }
+    QPushButton:hover{
+        border:2px solid #000;
+	
+	background-color: rgb(255, 130, 126);
+    }</string>
+    </property>
+    <property name="text">
+     <string>登入/登出</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Ver">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>0</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(222, 222, 222);
+color: rgb(167, 167, 167);</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speechText">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>460</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:0;
+font: 10pt &quot;微軟正黑體&quot;;
+border:1px solid #000;
+border-radius:10px;
+background-color: rgb(221, 221, 221);</string>
+    </property>
+    <property name="text">
+     <string>按下ctrl開始發言</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnMenu">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>20</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    QPushButton{
+		border:0;
+		font: 700 10pt ;
+		border:1px solid #000;
+		background-color: rgb(255, 255, 255);
+		border-radius:10px;
+    }
+    QPushButton:hover{
+        border:2px solid #000;		
+    	background-color: rgb(255, 170, 0);
+    }</string>
+    </property>
+    <property name="text">
+     <string>進入功能</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>120</y>
+      <width>411</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft JhengHei UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;h1 style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;description&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-size:xx-large; font-weight:700; text-decoration: underline;&quot;&gt;學&lt;/span&gt;&lt;span style=&quot; font-size:xx-large; font-weight:700; text-decoration: underline;&quot;&gt;分計算機&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;只需要輸入校往帳號密碼，就能夠協助學生計算他們目前所擁有的學分數和尚需取得的學分數的工具。&lt;br /&gt;並且可以幫助學生輕鬆地計算他們的學分進度，並確定他們何時可以畢業。 &lt;/span&gt;&lt;/p&gt;
+&lt;h3 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;這個計算機還包括以下功能： &lt;/span&gt;&lt;/h3&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;學分清單：學生可以輸入他們已經完成的課程和取得的學分數。這樣他們就可以清楚地知道他們還需要多少學分才能完成學位。&lt;br /&gt;&lt;/li&gt;
+&lt;li style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;預測計算：學生可以使用這個計算機來預測他們未來的學分進度。他們可以輸入他們預計要修的課程和學分數，以及他們每學期的預計學分數。這樣他們就可以預測何時可以完成學位。&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:medium; font-weight:700;&quot;&gt;此外，我們的學分計算機還具有以下特點： &lt;/span&gt;&lt;/h3&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;簡單易用：學生可以輕鬆地輸入他們的學分和課程信息，然後點擊計算按鈕便可得到他們的學分進度。&lt;br /&gt;&lt;/li&gt;
+&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;即時更新：當學生輸入新的課程和學分信息時，學分計算機會立即更新學分進度，讓學生始終了解他們的學位進度。&lt;br /&gt;&lt;/li&gt;
+&lt;li style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;可定制化：學生可以選擇使用學分計算機的不同模式，以適應不同的學位計劃。&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnActivation">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>20</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    QPushButton{
+		border:0;
+		font: 700 10pt ;
+		border:1px solid #000;
+		background-color: rgb(255, 255, 255);
+		border-radius:10px;
+    }
+    QPushButton:hover{
+        border:2px solid #000;		
+    	background-color: rgb(255, 170, 0);
+    }</string>
+    </property>
+    <property name="text">
+     <string>btnActivation</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>503</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

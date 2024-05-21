@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>377</width>
+    <height>304</height>
+   </rect>
+  </property>
+  <property name="tabletTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>登入介面</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnLogin">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>220</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+    QPushButton{
+		border:0;
+		font: 700 12pt &quot;微軟正黑體&quot;;
+		border:1px solid #000;
+		background:#fff;
+		border-radius:10px;
+    }
+    QPushButton:hover{
+        border:2px solid #000;
+        background:rgb(255, 92, 92);
+    }</string>
+    </property>
+    <property name="text">
+     <string>登入</string>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_bAutoLogin">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>170</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>自動登入</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textEdit_Password">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>100</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    QLineEdit{
+		border:0;
+		font: 700 11pt &quot;微軟正黑體&quot;;
+		border:1px solid #000;
+		background:#fff;
+		border-radius:10px;
+		border-color: rgb(227, 227, 227);
+    }
+    QLineEdit:hover{
+        border:1px solid #000;
+
+    }
+</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>密碼</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textEdit_Account">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>40</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">   
+ QLineEdit{
+		border:0;
+		font: 700 11pt &quot;微軟正黑體&quot;;
+		border:1px solid #000;
+		background:#fff;
+		border-radius:12px;
+		
+	border-color: rgb(227, 227, 227);
+    }
+    QLineEdit:hover{
+        border:1px solid #000;
+
+    }
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>學號</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGuest">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>170</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+    QPushButton{
+		border:0;
+		font: 700 9pt &quot;微軟正黑體&quot;;
+		border:1px solid #000;
+		background-color: rgb(220, 220, 220);
+		border-radius:10px;
+    }
+    QPushButton:hover{
+        border:2px solid #000;
+    }</string>
+    </property>
+    <property name="text">
+     <string>遊客登入</string>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hintText">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(134, 134, 134);</string>
+    </property>
+    <property name="text">
+     <string>[ex]</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>377</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>textEdit_Account</tabstop>
+  <tabstop>textEdit_Password</tabstop>
+  <tabstop>btnLogin</tabstop>
+  <tabstop>checkBox_bAutoLogin</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
