@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://joechen0730.github.io/Joe-shop/bootstrap-shop-product.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Joe's Shop</title>
+    <link rel="stylesheet" href="static\Shop\boostrap-shop-item.css">
+    <link rel="stylesheet" href="static\Shop\bootstrap.min.css">
+    <link rel="stylesheet" href="static\Shop\font-awesome.min.css">
+    <link rel="stylesheet" href="static\Shop\bootstrap-shop-product.css">
+    <script src="static\Shop\jquery-3.2.1.slim.min.js" ></script>
+    <script src="static\Shop\popper.min.js" ></script>
+    <script src="static\Shop\bootstrap.min.js"></script>
+   
+</head>
+
+<body>
+    <div class="container" id="product-title">
+        <div class="row" id="titlebar">
+            <div class="col-md-12 mt-4 mb-3 text-center text-secondary">
+                <h1 class="display-5">軟體購買結帳</h1>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-between mb-3">
+
+            <div class="col-md-4 col-12 ">
+                <div class="alert alert-warning text-secondary text-center alert-radius" role="alert">
+                    1.輸入訂單資料
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="alert text-secondary text-center" role="alert">
+                    2.金流付款確認
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="alert text-secondary text-center" role="alert">
+                    3.完成結帳
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-12 m-auto">
+                <div class="card">
+                    <div class="card-header d-flex align-items-end justify-content-between" id="headingOne">
+                        <h5 class="mb-0 ">
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                         顯示明細
+                        </button>
+                        </h5>
+                        <strong class="h5">
+                            NT$60
+                        </strong>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <table class="table table-hover table-sm">
+                                <thead>
+                                    </thead><thead>
+                                        <tr>
+                                            <th colspan="2" class="border-top-0 text-center">以選擇商品</th>
+                                            <th class="border-top-0">數量</th>
+                                            <th class="border-top-0 text-right">價格</th>
+                                        </tr>
+
+                                    </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <td> 畢業門檻查詢軟體</td>
+                                        <td> 畢業門檻查詢軟體</td>
+                                        <td> 一套</td>
+                                        <td class="text-right">$60NT</td>
+                                    </tr>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr><th colspan="2"></th>
+                                    <th colspan="">合計</th>
+                                    <td class="text-right"><strong>$60NT</strong></td>
+                                </tr></tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 mb-4">
+            <div class="m-auto col-md-8 col-12">
+                <div class="alert alert-secondary text-center " role="alert">
+                    <strong>訂購人資訊</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <form class="needs-validation" novalidate="">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">訂購人姓名</label>
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="訂購人姓名" required="">
+                            <div class="valid-feedback">
+                                姓名不可空白
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">email</label>
+                            <input type="email" class="form-control" id="inputPassword4" placeholder="Email" required="">
+                            <div class="valid-feedback">
+                                信箱不可空白
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputAddress">聯絡電話</label>
+                            <input type="text" class="form-control" id="inputAddress" required="">
+                            <div class="valid-feedback">
+                                連絡電話不可空白
+                            </div>
+                        </div>
+                        
+                        <div class="form-gruop col-12 text-right">
+                            <button type="submit" class="btn btn-secondary mr-1 mb-5" id="keeybuy-btn"><a href="" class="text-white border-bottom-0">返回首頁</a></button>
+                            <button type="submit" class="btn btn-primary mb-5" id="pay-btn"><a href="https://joechen0730.github.io/Joe-shop/bootstrap-shop-sucess.html" class="text-white">確定付款</a></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">確定是否刪除此產品</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-outline-danger">確定刪除</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--    表單驗證 script-->
+    <script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+
+</body></html>

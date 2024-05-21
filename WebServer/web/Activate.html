@@ -1,0 +1,13 @@
+{% extends 'Nav.html' %}
+
+{% block content %}
+    <h1>啟用測試</h1>
+    <form action="/activate" method="post">
+        <label for="hwid">HWID:</label><br>
+        <input type="text" id="hwid" name="hwid"><br>
+        <label for="item_id"> ShopItemID:</label><br>
+        <input type="text" id="item_id" name="item_id"><br>
+        <input type="submit" value="啟用">
+    </form>
+
+{% endblock %}

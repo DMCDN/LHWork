@@ -1,0 +1,28 @@
+{% extends 'Nav.html' %}
+{% block title %}
+    更新日誌
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron p-5 text-center">
+    <h1 class="fw-bold">更新日誌</h1>
+    <div class="col-lg-6 mx-auto text-start">
+        {% for version, changes in changelog_data.items() %}
+            <h2>{{ version }}</h2>
+            <ul>
+            {% for version_num, change_info in changes.items() %}
+                <li>
+                    <strong>{{ version_num }}</strong> - {{ change_info['date'] }}
+                    <ul>
+                    {% for desc in change_info['desc'] %}
+                        <li>{{ desc }}</li>
+                    {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
