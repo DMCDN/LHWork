@@ -10,7 +10,7 @@ app.config.update(
     MAIL_USE_SSL=True,
     MAIL_DEFAULT_SENDER=('maoyan', 'm@mz'),
     MAIL_MAX_EMAILS=10,
-    MAIL_USERNAME='AAAA@gm.lhu.edu.tw',
+    MAIL_USERNAME='d1104241041@gm.lhu.edu.tw',
     MAIL_PASSWORD=''
 )
 mail = Mail(app)

@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request, redirect, session, g
 
+import os
+
 svrPath = '/home/LWork/mysite'
-devPath = r'C:\Users\HEXAOV\Desktop\ProjectP\Server'
+devPath = r'C:\Users\HEXAOV\Desktop\ProjectP\A_Repo\LHWork\WebServer'
 devpePath = '/storage/emulated/0/Download/Server/'
 
+os.chdir(devPath)
 app = Flask(__name__,
             template_folder=f'{devPath}/web/',
             static_folder=f'{devPath}/web/static/')
@@ -32,9 +35,7 @@ def ContactUs():
 def QA():
     return render_template('QA.html')
 
-@app.route('/Shop', methods=['GET'])
-def Shop():
-    return render_template('Shop.html')
+
 
 from DatabaseMgr import *
 from API.GlobalStdData import *
@@ -42,6 +43,7 @@ from API.Activation import *
 import web.Login
 import web.Activate
 import web.ChangeLog
+import web.Shop
 
 if __name__ == '__main__':
     app.run(port=8000,debug=True)

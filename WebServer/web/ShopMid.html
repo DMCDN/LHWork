@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>結帳區</title>
+    <link rel="stylesheet" href="static\Shop\boostrap-shop-item.css">
+    <link rel="stylesheet" href="static\Shop\bootstrap.min.css">
+    <link rel="stylesheet" href="static\Shop\font-awesome.min.css">
+    <link rel="stylesheet" href="static\Shop\bootstrap-shop-product.css">
+    <script src="static\Shop\jquery-3.2.1.slim.min.js" ></script>
+    <script src="static\Shop\popper.min.js" ></script>
+    <script src="static\Shop\bootstrap.min.js"></script>
+   
+</head>
+
+<body>
+    <div class="container" id="product-title">
+        <div class="row" id="titlebar">
+            <div class="col-md-12 mt-4 mb-3 text-center text-secondary">
+                <h1 class="display-5">結帳區</h1>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-between mb-3">
+
+            <div class="col-md-4 col-12">
+                <div class="alert text-secondary text-center" role="alert">
+                    1.輸入訂單資料
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="alert alert-warning text-secondary text-center alert-radius" role="alert">
+                    2.金流付款確認
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="alert text-secondary text-center" role="alert">
+                    3.完成結帳
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row mt-4 mb-4">
+            <div class="m-auto col-md-8 col-12">
+                <div class="alert alert-secondary text-center " role="alert">
+                    <strong>選擇付款方式</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <form class="needs-validation" novalidate="">
+                    <div class="form-row">
+                        <fieldset class="form-group row">
+
+                            <div class="">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        信用卡/金融卡付款
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        超商繳費
+                                    </label>
+                                </div>
+
+                            </div>
+                          </fieldset>
+                    </div>
+                    <div class="form-row">
+                        
+                        
+                        <div class="form-gruop col-12 text-right">
+                            <button type="submit" class="btn btn-secondary mr-1 mb-5" id="keeybuy-btn"><a href="Shop" class="text-white border-bottom-0">回到上頁</a></button>
+                            <button type="submit" class="btn btn-primary mb-5" id="pay-btn"><a href="ShopFinal" class="text-white">完成付款</a></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">確定是否刪除此產品</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-outline-danger">確定刪除</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--    表單驗證 script-->
+    <script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+
+</body></html>
