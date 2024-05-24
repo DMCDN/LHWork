@@ -39,6 +39,11 @@ def login():
                     LWork_conn.commit()
                     return f'驗證碼已過期，新的驗證碼已發送至您的信箱:({Email})'
             else:
+                with LWork_lock:
+                    LWork_cursor.execute('SELECT id FROM Purchases WHERE Member_id = ? AND ShopItem_id = ?', (UserID, 1))
+                    result = LWork_cursor.fetchone()
+                    if result:
+                        session['bIsBuy'] = 1
                 # 已驗證&帳密正確
                 session['UserID'] = UserID
                 session['UserName'] = username

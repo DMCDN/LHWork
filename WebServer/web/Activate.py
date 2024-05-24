@@ -2,29 +2,42 @@ from app import app, render_template, session ,LWork_conn,LWork_cursor,LWork_loc
 from flask import jsonify, request
 
 # 啟用會員頁面
-@app.route('/activate', methods=['GET', 'POST'])
-def activate():
-    # [ex]檢測 是否已付款
+@app.route('/activate', methods=['GET', 'POST', 'DELETE'])
+def E823_8FA6_BF53_0001_001B_444A_468B_9364():
     member_id = session.get('UserID')
-    item_id=1
-    LWork_cursor.execute('SELECT id FROM Purchases WHERE Member_id = ? AND ShopItem_id = ?', (member_id, item_id))
-    result = LWork_cursor.fetchone()
-    if not result:
-        return f'您尚未購買{item_id}'
+    item_id = 1
+    if request.method == 'DELETE':
+        hwid = request.args.get('hwid')
+        deactivate_hwid(member_id, hwid)
 
     if request.method == 'POST':
          
         hwid = request.form['hwid']
-        item_id = request.form['item_id']
+        
         if not member_id:
             return '未登入'
         
         result = activate_hwid(member_id, hwid, item_id)
         #if result:
         return result
-        #else:
-        #    return 'HWID不存在'
-    return render_template('Activate.html')
+
+    if request.method == 'GET':
+        # [ex]檢測 是否已付款
+
+        with LWork_lock:
+            LWork_cursor.execute('SELECT id FROM Purchases WHERE Member_id = ? AND ShopItem_id = ?', (member_id, item_id))
+            result = LWork_cursor.fetchone()
+        if not result:
+            return f'您尚未購買{item_id}'
+        else:
+            with LWork_lock:
+                LWork_cursor.execute('SELECT id FROM Purchases WHERE Member_id = ? AND ShopItem_id = ?', (member_id, item_id))
+                result = LWork_cursor.fetchone()
+
+
+    hwids = Member_Query_HWID(member_id, item_id)
+    return render_template('Activate.html', hwids=hwids)
+
 
 
 # 測試會員新增指定 HWID
@@ -52,17 +65,9 @@ def deactivate_hwid(member_id, hwid):
     LWork_conn.execute('UPDATE ActivationCodes SET Activated = 0 WHERE HWID = ?', (hwid,))
     LWork_conn.commit()
 
-# 測試查詢 HWID
-def query_hwid_info(hwid):
 
-    LWork_cursor.execute('SELECT Activated, ExpiryDate FROM ActivationCodes WHERE HWID = ?', (hwid,))
-    result = LWork_cursor.fetchone()
-
-    if result:
-        activated, expiry_date = result
-
-        return {'HWID': hwid, 'ExpiryDate': expiry_date, 'Activated': bool(activated)}
-    else:
-
-        return None
-
+# Member查 hwid
+def Member_Query_HWID(member_id, item_id):
+    LWork_cursor.execute('SELECT HWID FROM MemberHWID WHERE Member_id = ? AND Item_id = ?', (member_id, item_id))
+    results = LWork_cursor.fetchall() 
+    return results if results else []

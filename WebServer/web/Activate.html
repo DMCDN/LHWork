@@ -1,13 +1,35 @@
 {% extends 'Nav.html' %}
 
 {% block content %}
+    <script>
+        function removeHWID(hwid) {
+            fetch(`/activate?hwid=${hwid}`, {
+                method: 'DELETE'
+            }).then(response => {
+                if (response.ok) {
+                    location.reload(); // 刪除後reload page
+                } else {
+                    alert('移除該序號失敗');
+                }
+            });
+        }
+    </script>
+
+    <h1>已啟用的序號：</h1>
+    <ul>
+        {% for hwid in hwids %}
+        <li>
+            {{ hwid[0] }}
+            <button onclick="removeHWID('{{ hwid[0] }}')">Remove</button>
+        </li>
+        {% endfor %}
+    </ul>
+
     <h1>啟用測試</h1>
     <form action="/activate" method="post">
-        <label for="hwid">HWID:</label><br>
+        <label for="hwid">序號:</label><br>
         <input type="text" id="hwid" name="hwid"><br>
-        <label for="item_id"> ShopItemID:</label><br>
-        <input type="text" id="item_id" name="item_id"><br>
-        <input type="submit" value="啟用">
+        <button type="submit">啟用</button>
     </form>
 
 {% endblock %}

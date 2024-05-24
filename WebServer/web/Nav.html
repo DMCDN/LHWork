@@ -83,7 +83,11 @@
 						
                         
                     </ul>
+                    {% if g.UserName %}
 					<a href="Shop" class="btn btn-outline-light btn-lg rounded-pill fs-6 fw-bold">購買產品</a>
+                    {% else %}
+                    <a onclick="flashMessage('請先登入')" href="Shop" class="btn btn-outline-light btn-lg rounded-pill fs-6 fw-bold">購買產品</a>
+                    {% endif %}
                 </div>                
             </div>            
         </nav>
@@ -114,6 +118,9 @@
 		function openNewPage() {
 			window.open('https://drive.google.com/file/d/1fohevCqa5lLqWAoLsNIvW7JbHRdnf-GC/view?usp=drive_link', '_blank');
 		}
+        function flashMessage(msg) {
+            alert(msg);
+        }
 		</script>
 		
     </body>

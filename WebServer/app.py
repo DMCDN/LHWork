@@ -11,11 +11,12 @@ app = Flask(__name__,
             template_folder=f'{devPath}/web/',
             static_folder=f'{devPath}/web/static/')
 
-app.secret_key = b''
+app.secret_key = b'1233456789abcdef'
 
 @app.before_request
 def before_request():
     g.UserName = session.get('UserName')
+    g.bIsBuy = session.get('bIsBuy')
 
 @app.route('/', methods=['GET'])
 def get_Host():
