@@ -3,7 +3,7 @@ from flask import jsonify, request
 
 # 啟用會員頁面
 @app.route('/activate', methods=['GET', 'POST', 'DELETE'])
-def E823_8FA6_BF53_0001_001B_444A_468B_9364():
+def activate():
     member_id = session.get('UserID')
     item_id = 1
     if request.method == 'DELETE':
